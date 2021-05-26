@@ -1,0 +1,10 @@
+console.time('Your code Took');
+console.log("Hello World");
+console.log(11+23);
+console.log(34);
+console.log(true);
+console.log([34,2,1,2]);
+console.log({ram:'best', marks: 11});
+console.table({ram:'best', marks: 11});
+console.warn("This is a warning");
+console.timeEnd('Your code Took');

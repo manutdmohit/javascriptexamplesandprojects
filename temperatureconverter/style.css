@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8e7af;
+  display: grid;
+  place-items: center;
+}
+
+form {
+  background-color: white;
+  height: 200px;
+  width: 400px;
+  display: grid;
+  /* justify-content: center; */
+  place-content: center;
+}
+
+#temp {
+  margin-bottom: 5px;
+  margin-top: -12px;
+}
+
+label {
+  padding-top: 35px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#resultContainer {
+  text-align: center;
+}
+
+#temp_diff {
+  margin-bottom: -10px;
+}
+
+#temp,
+#temp_diff {
+  display: grid;
+}

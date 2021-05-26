@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timing Events</title>
+  </head>
+  <body>
+    <!-- <p>My name is</p> -->
+    <p id="showNum">Dare to stop increasing num at 5</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <!-- <button id="buttonClick">Click to Now My Name</button> -->
+    <script>
+      //   const myName = document.querySelector("#showName");
+      //   const buttonCick = document.querySelector("#buttonClick");
+
+      //   //   const showName = () => {
+      //   //     setTimeout(() => {
+      //   //       myName.innerHTML = "Mohit Saud";
+      //   //     }, 1000);
+      //   //   };
+
+      //   const data = buttonClick.addEventListener("click", () => {
+      //     myName.innerHTML = "loading...";
+      //     setTimeout(() => {
+      //       myName.innerHTML = "Mohit Saud";
+      //     }, 5000);
+      //   });
+
+      const num = document.getElementById("showNum");
+      const startNum = document.getElementById("start");
+      const stopNum = document.getElementById("stop");
+      let fNum = 0;
+      let timeRef;
+
+      const show = startNum.addEventListener("click", () => {
+        num.innerHTML = "loading....";
+        timeRef = setInterval(() => {
+          num.innerHTML = fNum;
+          fNum++;
+        }, 1000);
+      });
+
+      const stop = stopNum.addEventListener("click", () => {
+        clearInterval(timeRef);
+      });
+    </script>
+  </body>
+</html>

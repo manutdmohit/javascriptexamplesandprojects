@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background-color: purple;
+      }
+      .main {
+        display: flex;
+        /* place-content: center; */
+        align-items: center;
+        flex-direction: column;
+        margin-top: 280px;
+        /* margin: 150px; */
+        /* padding: 50px; */
+        /* margin: 300px auto auto auto; */
+      }
+      /* .child {
+        color: rgba(255, 255, 255, 0.912);
+        font-size: 20px;
+      }
+      form {
+        display: flex;
+        color: white;
+      } */
+      label {
+        font-weight: bold;
+      }
+      input {
+        background-color: white;
+        width: 200px;
+      }
+      select,
+      option {
+        background-color: white;
+      }
+      select {
+        width: auto;
+      }
+      #result {
+        color: #00000c;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <label for="">Your Name</label>
+      <input type="text" name="" id="ice" />
+      <label for="">Choose your favourite icecream colour</label>
+      <select name="iceCreams" id="iceCreams" onchange="selectIceCream()">
+        <option disabled selected value>-- select an option --</option>
+        <option value="banana">Banana</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="vanilla">Vanilla</option>
+        <option value="local">Local</option>
+      </select>
+      <br />
+      <div id="result"></div>
+    </div>
+
+    <script>
+      const selectIceCream = () => {
+        const input = document.getElementById("ice").value;
+        const iceCreams = document.getElementById("iceCreams").value;
+        const result = `${input} selected ${iceCreams}`;
+        document.getElementById("result").innerHTML = result;
+      };
+    </script>
+  </body>
+  <!-- <div class="child">I am first child</div>
+      <div class="child">I am second child</div>
+      <div class="child">I am third child</div>
+      <h1 id="heading">Mohit is Learning</h1>
+      <form action="">
+        <label for="">male</label>
+        <input type="radio" name="gender" id="" />
+        <label for="">female</label>
+        <input type="radio" name="gender" id="" />
+        <label for="">Can't Specify</label>
+        <input type="radio" name="gender" id="" />
+      </form>
+      <br />
+      <button onclick="changeContent()">Click Me</button>
+    </div>
+  <script>
+    const changeContent = () => {
+      //   document.getElementById("heading").innerHTML = "Let him study";
+      //   console.log(document.getElementsByClassName("child"));
+      //   console.log(document.getElementsByTagName("h1"));
+      //   console.log(document.getElementsByName("gender"));
+      //   document.querySelector("#heading").innerHTML = "Learning";
+      // query selector changes the first matched element
+      console.log(document.querySelectorAll(".child"));
+    };
+  </script> -->
+</html>

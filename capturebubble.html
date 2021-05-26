@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capture Bubble</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      #parentdiv {
+        justify-content: center;
+        background-color: red;
+        height: 200px;
+        width: 150px;
+        position: relative;
+        /* margin: 500px; */
+        margin: 200px auto;
+      }
+      #childdiv {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        /* Center vertically and horizontally */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* margin: */
+        margin: -25px 0 0 -25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parentdiv">
+      <div id="childdiv"></div>
+    </div>
+    <script>
+      // default bubble which means first child then parent
+      const parent = document.getElementById("parentdiv");
+      const child = document.getElementById("childdiv");
+
+      const parentCall = () => alert("Parent Div Call");
+      const childCall = () => {
+        alert("Child Div Call");
+        // event.stopPropagation();
+      };
+
+      parent.addEventListener("click", parentCall, true);
+      child.addEventListener("click", childCall, true);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+* {
+  margin: 0px;
+}
+
+img {
+  height: 100px;
+}
+
+body {
+  background-color: brown;
+  text-align: center;
+  margin: 225px auto;
+}
